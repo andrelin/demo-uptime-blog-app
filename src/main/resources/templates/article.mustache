@@ -1,0 +1,19 @@
+{{> header}}
+<div style="text-align: center;">
+    <div style="display: inline-block; text-align: left;">
+        <section class="article">
+            <header class="article-header">
+                <h1 class="article-title">{{article.title}}</h1>
+                <p class="article-meta">By  <strong>{{article.author.firstname}}</strong>, on <strong>{{article.addedAt}}</strong></p>
+            </header>
+
+            <div class="article-description">
+                {{article.headline}}
+
+                {{article.content}}
+            </div>
+        </section>
+    </div>
+</div>
+
+{{> footer}}

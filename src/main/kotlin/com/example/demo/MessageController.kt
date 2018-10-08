@@ -1,4 +1,4 @@
-package com.example.andrelindemo
+package com.example.demo
 
 import org.springframework.web.bind.annotation.*
 
