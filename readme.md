@@ -5,6 +5,15 @@
 * Docker 
 * JDK8
 
+## Kotlin
+#### Features
+* Compiles to JVM bytecode or JavaScript
+* Lean Syntax
+* Type inference
+* Null-safety
+* Extension functions
+* Functional programmin support
+
 ## Kubernetes (part 1)
 We need to create a cluster and configure the shell for anything to work.
 #### Create a cluster:
@@ -41,7 +50,7 @@ We need to create a cluster and configure the shell for anything to work.
 `kubectl expose deployment demo --type=LoadBalancer --port 80 --target-port 8080`
 
 ##### Scale the deployment
-`kubectl scale deployment demo --replicas=3
+`kubectl scale deployment demo --replicas=3`
 
 #### Check the deployment
 ##### View the pods and their status 
@@ -78,3 +87,4 @@ Deletes the resources used by the cluster, including virtual machines, disks, an
 1. [GCP Tutorial - Run a simple app on GCPs Kubernetes Engine](https://cloud.google.com/community/tutorials/kotlin-springboot-container-engine)
 2. [Spring.io Tutorial - Build a Simple Spring Boot Kotlin Blog](https://spring.io/guides/tutorials/spring-boot-kotlin/) 
 3. [Spring.io Github repo](https://github.com/spring-guides/tut-spring-boot-kotlin)
+4. [Why use Kotlin?](https://medium.com/@octskyward/why-kotlin-is-my-next-programming-language-c25c001e26e3)

@@ -23,22 +23,8 @@ class DemoApplication  {
         userRepository.save(andrelin)
 
         articleRepository.save(Article(
-                "Kotlin Programming Language",
-                "What is Kotlin?",
-                "Kotlin is made by a developer team from JetBrains.",
-                andrelin,
-                1
-        ))
-        articleRepository.save(Article(
-                "Docker Containers",
-                "What are Docker containers?",
-                "Docker Containers are like tiny VMs that you can easily build and send out into the world",
-                andrelin,
-                2
-        ))
-        articleRepository.save(Article(
-                "Google Kubernetes Engine",
-                "The industry standard orchestration tool",
+                "Google Cloud Kubernetes Engine",
+                "Great orchestration tool!",
                 "Orchestration is Cool!",
                 andrelin,
                 3
@@ -56,6 +42,20 @@ class DemoApplication  {
                 "https://spring.io/guides/tutorials/spring-boot-kotlin/",
                 andrelin,
                 5
+        ))
+        articleRepository.save(Article(
+                "Docker Containers",
+                "What are Docker containers?",
+                "Docker Containers are like tiny VMs that you can easily build and send out into the world",
+                andrelin,
+                2
+        ))
+        articleRepository.save(Article(
+                "Kotlin Programming Language",
+                "What is Kotlin?",
+                "Kotlin is made by a developer team from JetBrains.",
+                andrelin,
+                1
         ))
     }
 }
