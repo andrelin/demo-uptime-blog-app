@@ -1,12 +1,19 @@
-# FROM gradle:jdk8-alpine
-FROM openjdk:8-jdk-alpine
+# syntax=docker/dockerfile:experimental
+FROM amazoncorretto:11 as build
 
-VOLUME /tmp
-RUN mkdir /app
-COPY . /app
-WORKDIR /app
+ADD gradlew .
+ADD gradle gradle
 
-RUN /app/gradlew build --full-stacktrace
-RUN mv /app/build/libs/*.jar /app/demo.jar
+# Project source
+ADD src src
+ADD .git .git
+ADD build.gradle.kts .
+ADD settings.gradle.kts .
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/demo.jar"]
+# Gradle build
+RUN ./gradlew build --no-daemon
+
+# Application image
+FROM amazoncorretto:11
+COPY --from=build /build/libs/*.jar app.jar
+ENTRYPOINT ["java",  "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]
